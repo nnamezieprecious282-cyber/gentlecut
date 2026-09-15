@@ -1,0 +1,661 @@
+/* ==========================================
+            THEME VARIABLES
+========================================== */
+
+:root {
+    --bg-primary: #111;
+    --bg-secondary: #181818;
+    --text-primary: #fff;
+    --text-secondary: #999;
+    --border-color: #444;
+    --button-bg: #fff;
+    --button-text: #111;
+}
+
+
+/* ==========================================
+            LIGHT MODE
+========================================== */
+
+body.light-mode {
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #fff;
+    --text-primary: #111;
+    --text-secondary: #666;
+    --border-color: #d5d5d5;
+    --button-bg: #111;
+    --button-text: #fff;
+}
+
+/* ==========================================
+            GLOBAL RESET
+========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* ==========================================
+            HEADER
+========================================== */
+
+.header {
+    width: 100%;
+    height: 80px;
+    padding: 0 6%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+/* ==========================================
+                NAVIGATION
+========================================== */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.nav a {
+    position: relative;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+
+    color: var(--text-primary);
+
+    transition: opacity 0.3s ease;
+}
+
+.nav a:hover {
+    opacity: 0.6;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: baseline;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#logo-text {
+    margin-left: 3px;
+    font-family: "Brush Script MT", "Segoe Script", cursive;
+    font-size: 1.65rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    text-transform: lowercase;
+}
+
+/* Logo "cut" */
+#logo-text {
+    color: #d6d6d628;
+}
+
+/* Light mode */
+body.light-mode #logo-text {
+    color: #555555;
+}
+
+/* ==========================================
+              THEME TOGGLE
+========================================== */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: 5px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 50%;
+
+    background: transparent;
+    color: var(--text-primary);
+
+    font-size: 0.95rem;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    transform: rotate(15deg);
+}
+
+#themeIcon {
+    line-height: 1;
+}
+
+/* ==========================================
+                HERO
+========================================== */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 6% 100px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.9),
+            rgba(0, 0, 0, 0.35)
+        ),
+        url("img/fade-haircut.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-label,
+.section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    opacity: 0.65;
+}
+
+.hero h1 {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: -3px;
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    max-width: 450px;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 28px;
+
+    background: #fff;
+    color: #111;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease;
+}
+
+.hero-button:hover {
+    background: #222;
+    color: #fff;
+}
+
+
+/* ==========================================
+          HAIRSTYLE SECTION
+========================================== */
+
+.styles-section {
+    padding: 120px 0;
+    background: var(--bg-primary);
+    overflow: hidden;
+}
+
+.section-heading {
+    text-align: center;
+    padding: 0 6%;
+    margin-bottom: 70px;
+}
+
+.section-heading h2,
+.contact-section h2 {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.section-heading > p:last-child,
+.contact-content > p:last-of-type {
+    color: var(--text-secondary);
+}
+
+
+/* ==========================================
+             STYLE ROWS
+========================================== */
+
+.style-row {
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 18px;
+}
+
+.style-track {
+    display: flex;
+    width: max-content;
+    gap: 18px;
+}
+
+
+/* ==========================================
+          HAIRSTYLE CARD
+========================================== */
+
+.style-card {
+    width: 280px;
+    height: 360px;
+    flex-shrink: 0;
+
+    position: relative;
+    overflow: hidden;
+
+    cursor: pointer;
+}
+
+.style-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.style-card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* ==========================================
+          CONTACT SECTION
+========================================== */
+
+.contact-section {
+    padding: 140px 6%;
+    text-align: center;
+    background: var(--bg-secondary);
+}
+
+.contact-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.contact-content > p:last-of-type {
+    max-width: 450px;
+    margin: 0 auto 35px;
+    line-height: 1.7;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.social-links a {
+    padding: 13px 24px;
+    border: 1px solid #444;
+
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    transition:
+        background 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.social-links a:hover {
+    background: #fff;
+    color: #111;
+    border-color: #fff;
+}
+
+/* ==========================================
+            HAIRSTYLE MODAL
+========================================== */
+
+.style-modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+
+    display: none;
+
+    padding: 5vh 20px;
+
+    overflow-y: auto;
+}
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    backdrop-filter: blur(6px);
+}
+
+
+.modal-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(550px, 60%);
+
+    margin: 0 auto;
+
+    background: var(--bg-secondary);
+
+    border: 1px solid var(--border-color);
+
+    overflow: hidden;
+
+    animation: modalOpen 0.3s ease;
+}
+
+
+@keyframes modalOpen {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+
+}
+
+
+.modal-content img {
+    width: 100%;
+
+    max-height: 600px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.modal-info {
+    padding: 35px;
+}
+
+
+.modal-info h2 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+
+.modal-info p:last-child {
+    color: var(--text-secondary);
+
+    line-height: 1.7;
+
+    max-width: 600px;
+}
+
+
+.modal-close {
+    position: absolute;
+
+    top: 15px;
+    right: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, 0.7);
+
+    color: #fff;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+
+    z-index: 5;
+
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
+}
+
+
+.modal-close:hover {
+    background: #000;
+
+    transform: rotate(90deg);
+}
+
+/* ==========================================
+              MOBILE
+========================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 70px;
+        padding: 0 5%;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+    }
+
+    .nav a {
+        font-size: 0.75rem;
+    }
+
+    .theme-toggle {
+        width: 38px;
+        height: 38px;
+        margin-left: 0;
+    }
+
+    /* Keep the rest of your existing
+       mobile CSS below this point */
+
+    .hero {
+        padding: 130px 5% 80px;
+    }
+
+    .hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .styles-section {
+        padding: 90px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 45px;
+    }
+
+    .style-card {
+        width: 210px;
+        height: 280px;
+    }
+
+    .style-row {
+        margin-bottom: 12px;
+    }
+
+    .style-track {
+        gap: 12px;
+    }
+
+       .style-track {
+        animation-duration: 35s;
+    }
+
+    .contact-section {
+        padding: 100px 5%;
+    }
+
+    .style-modal {
+        padding: 20px;
+    }
+
+    .modal-content img {
+        max-height: 55vh;
+    }
+
+    .modal-info {
+       padding: 25px;
+    }
+
+    .modal-close {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+/* ==========================================
+        INFINITE GALLERY ANIMATION
+========================================== */
+
+.style-track {
+    display: flex;
+    width: max-content;
+    gap: 18px;
+
+    will-change: transform;
+
+    animation: scroll-left 45s linear infinite;
+}
+
+.row-two .style-track {
+    animation-name: scroll-right;
+}
+
+.row-three .style-track {
+    animation-name: scroll-left;
+}
+
+
+/* ==========================================
+        SEAMLESS INFINITE SCROLL
+========================================== */
+
+@keyframes scroll-left {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-50% - 9px));
+    }
+}
+
+
+@keyframes scroll-right {
+
+    from {
+        transform: translateX(calc(-50% - 9px));
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* ==========================================
+        DESKTOP HOVER PAUSE ONLY
+========================================== */
+
+@media (min-width: 701px) {
+
+    .style-row:hover .style-track {
+        animation-play-state: paused;
+    }
+
+}
+

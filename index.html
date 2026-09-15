@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Barbing Salon</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <a href="#" class="logo">
+        GENTLE<span id="logo-text">cut</span>
+    </a>
+
+    <nav class="nav">
+        <a href="#styles">Styles</a>
+        <a href="#contact">Contact</a>
+
+        <button
+            class="theme-toggle"
+            id="themeToggle"
+            type="button"
+            aria-label="Toggle theme"
+        >
+            <span id="themeIcon">☀</span>
+        </button>
+    </nav>
+
+</header>
+
+    <!-- ==============================
+            HERO
+    =============================== -->
+
+    <main>
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <p class="hero-label">
+                    PREMIUM BARBERING
+                </p>
+
+                <h1>
+                    YOUR STYLE.<br>
+                    YOUR STATEMENT.
+                </h1>
+
+                <p class="hero-text">
+                    Explore our collection of fresh cuts and
+                    modern hairstyles.
+                </p>
+
+                <a href="#styles" class="hero-button">
+                    EXPLORE STYLES
+                </a>
+<!-- 
+                <img src="img/fade-haircut.jpg" alt=""> -->
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+                HAIRSTYLE SECTION
+        =============================== -->
+
+        <section class="styles-section" id="styles">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    OUR STYLES
+                </p>
+
+                <h2>
+                    FIND YOUR NEXT LOOK
+                </h2>
+
+                <p>
+                    Explore some of the styles we create.
+                </p>
+
+            </div>
+
+
+            <!-- ROW 1 -->
+
+            <div class="style-row row-one">
+
+                <div class="style-track">
+
+                    <!-- Hairstyles will be generated here -->
+
+                </div>
+
+            </div>
+
+
+            <!-- ROW 2 -->
+
+            <div class="style-row row-two">
+
+                <div class="style-track">
+
+                    <!-- Hairstyles will be generated here -->
+
+                </div>
+
+            </div>
+
+
+            <!-- ROW 3 -->
+
+            <div class="style-row row-three">
+
+                <div class="style-track">
+
+                    <!-- Hairstyles will be generated here -->
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==============================
+                CONTACT
+        =============================== -->
+
+        <section class="contact-section" id="contact">
+
+            <div class="contact-content">
+
+                <p class="section-label">
+                    GET IN TOUCH
+                </p>
+
+                <h2>
+                    LIKE A STYLE?
+                </h2>
+
+                <p>
+                    Reach out to us through any of our
+                    social platforms.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="#" target="_blank">
+                        WhatsApp
+                    </a>
+
+                    <a href="#" target="_blank">
+                        TikTok
+                    </a>
+
+                    <a href="#" target="_blank">
+                        Facebook
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==============================
+            HAIRSTYLE MODAL
+    =============================== -->
+
+    <div class="style-modal" id="styleModal">
+
+        <div class="modal-overlay"></div>
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="modalClose">
+                &times;
+            </button>
+
+            <img
+                src=""
+                alt=""
+                id="modalImage"
+            >
+
+            <div class="modal-info">
+
+                <p class="section-label">
+                    HAIRSTYLE
+                </p>
+
+                <h2 id="modalTitle">
+                    Hairstyle Name
+                </h2>
+
+                <p id="modalDescription">
+                    Hairstyle description.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="func.js"></script>
+
+</body>
+</html>
